@@ -40,3 +40,10 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
     * Returns “Hello World”
   * `>>> 4 + 6`
     * Interprets it as a summation and returns “10”
+
+## Creating and Running Our First Python Script
+1. Open Terminal
+2. Change directory to a place where you'd like your python to live (e.g., `$ cd learn-python`)
+3. `% nano test.py` to create a python script
+4. ctrl+O to save, ENTER, ctrl+X to exit
+5. Run script with `% python3 test.py` in your terminal
