@@ -7,8 +7,8 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * Code readability
   * Simplicity
 * Two current versions
- 1. Python2 (currently at 2.7.11)
- 2. Python3 (currently at 3.5.1)
+  1. Python2 (currently at 2.7.11)
+  2. Python3 (currently at 3.5.1)
 * When you look at python, it’s all indentation-based, so you don’t need to wrap blocks of code in curly braces (i.e., { } )
 
 ## Installation
