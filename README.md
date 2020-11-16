@@ -47,3 +47,8 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
 3. `% nano test.py` to create a python script
 4. ctrl+O to save, ENTER, ctrl+X to exit
 5. Run script with `% python3 test.py` in your terminal
+
+## Setting Up Our Integrated Development Environment (IDE)
+* PyCharm (Community) from JetBrains is free; alternatively, you can use other IDEs
+  * Requires Java
+* Create a new Pure Python project with version 3.5.1
