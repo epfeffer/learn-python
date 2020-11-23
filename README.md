@@ -52,3 +52,37 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
 * PyCharm (Community) from JetBrains is free; alternatively, you can use other IDEs
   * Requires Java
 * Create a new Pure Python project with version 3.5.1
+
+## Numbers
+* Integers and Floating Points
+  * `>>> 5+6`
+    * Returns '11'
+  * `>>> "5" + "6"`
+    * Returns '56'
+  * `>>> 5.5 + 5.5`
+    * Returns '11.0' as a float
+  * `>>> int("5") + int("7")`
+    * Will convert both strings to integers and then do the math
+    * Returns '12'
+
+## Strings
+* Any text that you want to be treated as text in the program
+* `>>> 'Hello String'` or `>>> "Hello String"`; both double and single quotes work
+  * `>>> 'Don't do that` will result in an error, since it doesn't know when to start and end the string due to the apostrophe.
+    * Wrap the string in double quotations, instead of single
+    * `>>> "Don't do that"` would work
+    * `>>> print('She said \"Don\'t do that\"')` will return...
+      * She said "Don't do that"
+* Concatenate Strings
+  * Use a plus symbol between strings
+  * `>>> "H" + "e" + "ll" + "o"` will print 'Hello'
+  * `>>> "This costs " + 6 + " bucks"` will error out, since it doesn't know what to do with the integer in the middle and is trying to perform some mathematical equation. Instead...
+    * `>>> "This costs " + str(6 + 5) + " bucks"` will...
+      * perform 6+5 as integers and then convert it to a string
+      * concatenate all the three strings
+      * return 'This costs 11 bucks'
+* Split strings apart
+  * .split() procedure, based on parameter
+  * `>>> "Hello:Nick".split(":")` returns "['Hello', 'Nick']"
+  * You can also select which part of the split string to keep (remember, indexes start at 0)
+    * `>>> "My name is " + "Hello:Emily:World".split(":")[1]` returns 'My name is Emily'
