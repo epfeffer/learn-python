@@ -198,3 +198,28 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   else:
       print("It is actually equal to True")
   ```
+
+## For and While Loops
+* "For" loops are good for if you want to iterate over an array, you can do something repeatedly for each item in the list.
+  ```python
+  names = ["Emily", "Doug", "Patrick", "Paul", "Peter"]
+
+  for name in names:
+      print("This is", name)
+  ```
+* "While" loops
+  * The following will print the numbers 1-99 (i.e., while run is True)
+
+  ```python
+
+
+  run = True
+  current = 1
+
+  while run:
+      if current == 100:
+          run = False
+      else:
+          print(current)
+          current += 1
+  ```

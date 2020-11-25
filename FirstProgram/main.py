@@ -1,13 +1,11 @@
 
 
-check = "Hamburger"
+run = True
+current = 1
 
-if check == False:
-    print("If is false")
-elif check == "Hamburger":
-    print("Yummmm, hamburgers")
-elif check == "Yo":
-    print("Hey")
-else:
-    print("It is actually equal to True")
-
+while run:
+    if current == 100:
+        run = False
+    else:
+        print(current)
+        current += 1
