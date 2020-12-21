@@ -1,7 +1,9 @@
 # The Complete Python Course: Beginner to Advanced
 This document is a consolidation of Emily Pfeffer’s course notes from [The Complete Python Course: Beginner to Advanced](https://www.skillshare.com/classes/The-Complete-Python-Course-Beginner-to-Advanced/81017023?lessonsTab=on) offered on Skillshare.
 
-## Introduction to Python
+## Basic Programming Concepts
+
+### Introduction to Python
 * Python is a widely used high-level, general-purpose, interpreted, dynamic programming language
 * Built around two main focal points
   * Code readability
@@ -11,14 +13,14 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   2. Python3 (currently at 3.5.1)
 * When you look at python, it’s all indentation-based, so you don’t need to wrap blocks of code in curly braces (i.e., { } )
 
-## Installation
-### Mac/Linux
+### Installation
+#### Mac/Linux
 1. Open Terminal
 2. Install Homebrew
   * `$ /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install.sh)"`
 3. Install Python
   * `$ brew install python` or `$ sudo yum install python3`
-### Windows Installation
+#### Windows Installation
 1. Go to https://python.org/downloads/
 2. Download for Windows (Python 3.x)
 3. Launch the installer program
@@ -31,7 +33,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * `> python -m pip install requests`
     * Now you’ll have access to the requests class
 
-## Interpreted vs Compiled Programming Languages
+### Interpreted vs Compiled Programming Languages
 * With a compiled programming language (e.g., C++), you write your code and save it into a file. So, you write a function and script. Once you save your file, you need to compile it into a language that the computer can read (i.e., binary code).
 * With python, which is an interpreted programming language, when you write a script, you can instantaneously run that script without having to compile it. When you run python scripts, you run the python program, which interprets the code and automatically converts it into binary code using just-in-time compilation.
 * Hands-on Example in Terminal
@@ -41,20 +43,20 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * `>>> 4 + 6`
     * Interprets it as a summation and returns “10”
 
-## Creating and Running Our First Python Script
+### Creating and Running Our First Python Script
 1. Open Terminal
 2. Change directory to a place where you'd like your python to live (e.g., `$ cd learn-python`)
 3. `% nano test.py` to create a python script
 4. ctrl+O to save, ENTER, ctrl+X to exit
 5. Run script with `% python3 test.py` in your terminal
 
-## Setting Up Our Integrated Development Environment (IDE)
+### Setting Up Our Integrated Development Environment (IDE)
 * PyCharm (Community) from JetBrains is free; alternatively, you can use other IDEs
   * Requires Java
 * Create a new Pure Python project with version 3.5.1
 
-## Data Types
-### Numbers
+### Data Types
+#### Numbers
 * Integers and Floating Points
   * `>>> 5+6`
     * Returns '11'
@@ -66,7 +68,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
     * Will convert both strings to integers and then do the math
     * Returns '12'
 
-### Strings
+#### Strings
 * Any text that you want to be treated as text in the program
 * `>>> 'Hello String'` or `>>> "Hello String"`; both double and single quotes work
   * `>>> 'Don't do that` will result in an error, since it doesn't know when to start and end the string due to the apostrophe.
@@ -88,7 +90,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * You can also select which part of the split string to keep (remember, indexes start at 0)
     * `>>> "My name is " + "Hello:Emily:World".split(":")[1]` returns 'My name is Emily'
 
-### Booleans
+#### Booleans
 * True and False operators
 * Type 'True' and 'False' __without__ quotations; otherwise they'll be considered string values
   * `>>> True` returns a boolean True value
@@ -105,7 +107,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * `>>> "True" is str(True)` will return an error
   * `>>> "True" == str(True)` will return a boolean True value
 
-### Arrays
+#### Arrays
 * To define an array, open and close square brackets []
 * You can also specify which index of the array you want returned by including a number in square brackets after the array list
 * Suppose you're making a list of things you like...
@@ -117,7 +119,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
     * Surrounding the number with quotations will make the program consider it as a string and accept it
     * `>>> print("I like " + ["Movies", "16", "Python"][1])` will return 'I like 16'
 
-### Dictionaries
+#### Dictionaries
 * To create a dictionary, use opened/closed curly brackets { }
 * Suppose you want to create a person...
   * `>>> {"name": "Emily", "age": 29, "hobby": "code"}` returns {'name': 'Emily', 'age': 29, 'hobby': 'code'}
@@ -127,7 +129,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * `>>> {'name': 'Emily', 'age': 29, 'hobby': 'code'}['age']` will return 29
   * `>>> {'name': 'Emily', 'age': 29, 'hobby': 'code'}['hobby']` will return 'code'
 
-## Variables
+### Variables
 * The value of variables are not constant, which means they're also not reusable
 * Variables allow us to have dynamic logic
 * Some programming languages are typed, which means that you need to define the type of variable. Python does not require you to explicitly define the value type.
@@ -142,7 +144,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
   * `>>> secondnumber = 2`
   * `>>> print(number * secondnumber + secondnumber * number)` prints 4
 
-## Built-in Functions
+### Built-in Functions
 * `print()` prints text
 * `str()` converts to string
 * `int()` converts to integers
@@ -164,13 +166,13 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
     * Notice that since the numbers must be included as strings, they are ordered as strings. 100 comes before 99, even though they would be numerically descending
       * If I put a space in front of the ' 99', then... [' 99', '100', 'B', 'G', 'N', 'R', 'a', 'd', 'f']
 
-## Functions
+### Functions
 * Pep is Python's style guides
 * Drop down two lines before starting your code
 * Snake case for function names (e.g., my_function) - separate words with underscores
 * Python recognizes the end of a function based on indentation, instead of a semicolon like other programming languages.
 
-### Arguments
+#### Arguments
 * Go inside brackets at the end of a function name
 * Use variables
 * You can set defaults in your parameters
@@ -180,11 +182,11 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
     * `print_something(29)` sets name = 29 and uses the default age
     * `print_something(age = 29, name = "Emily")` sets name = "Emily" and age = 29
 
-### Infinite Number of Arguments
+#### Infinite Number of Arguments
 * `def print_people(*people)`
   * asterisks denotes that there will be an array
 
-## Conditional Statements
+### Conditional Statements
 * IF, ELIF, ELSE Statements
   ```python
   check = "Hamburger"
@@ -199,7 +201,7 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
       print("It is actually equal to True")
   ```
 
-## For and While Loops
+### For and While Loops
 * "For" loops are good for if you want to iterate over an array, you can do something repeatedly for each item in the list.
   ```python
   names = ["Emily", "Doug", "Patrick", "Paul", "Peter"]
@@ -223,3 +225,110 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
           print(current)
           current += 1
   ```
+
+### Importing Libraries
+* A module is an external library that you can reference and use in your logic
+* `>>> import re`
+  * Import Regular Expression (Regex)
+  * Can be used by phhp
+  * Matches certain characters and then does something based on that
+* `>>> string = "'I AM NOT YELLING', she said. Though we knew it to not be true."`
+* How to Use Regex
+  * `>>> print(string)`
+  * `>>> new = re.sub('[A-Z]', '', string)` calls the substitute function on the re object
+    * Three parameters that the substitute function takes are the matches we want to make, what we want to replace them with, and the string we want to manipulate
+    * Replace any capital letter A-Z
+    * `>>> print(new)` prints: '   ', she said. hough we knew it to not be true.
+  * `>>> new = re.sub('[a-z]', '', string)`
+    * `>>> print(new)` prints: 'I AM NOT YELLING',  . T       .
+  * `>>> new = re.sub('[.,\']', '', string)`
+    * `>>> print(new)` prints: I AM NOT YELLING she said Though we knew it to not be true
+  * `>>> new = re.sub('[+" "]', '', string)` removes spaces from the string
+    * `>>> print(new)` prints: 'IAMNOTYELLING',shesaid.Thoughweknewittonotbetrue.
+  * Remove anything except numbers...
+    * `>>> string = string + "6 298 - 345"`
+    * `>>> print(string)` prints: 'I AM NOT YELLING', she said. Though we knew it to not be true.6 298 - 345
+    * `>>> new = re.sub('[^0-9]','',string)`
+    * `>>> print(new)` prints: 6298345
+
+### Project #1 - Building a Calculator
+* Super basic calculator that prompts for function and values
+  ```python
+  def add(x, y):
+    """This function adds two numbers"""
+    return x + y
+  
+  def subtract(x, y):
+    """This function substracts two numbers"""
+    return x - y
+  
+  def multiply(x, y):
+    """This function multiplies two numbers"""
+    return x * y
+  
+  def divide(x, y):
+    """This function divides two numbers"""
+    return x / y
+  
+  # Take input from the user
+  print("Select operation.")
+  print("1.Add")
+  print("2.Subtract")
+  print("3.Multiply")
+  print("4.Divide")
+
+  choice = input("Enter choice(1/2/3/4): ")
+
+  num1 = int(input("Enter first number: "))
+  num2 = int(input("Enter second number: "))
+
+  if choice == '1':
+    print(num,"+",num2,"=", add(num1,num2))
+  
+  elif choice == '2':
+    print(num,"-",num2,"=", subtract(num1,num2))
+  
+  elif choice == '3':
+    print(num,"*",num2,"=", multiply(num1,num2))
+  
+  elif choice == '4':
+    print(num,"/",num2,"=", divide(num1,num2))
+  
+  else:
+    print("Invalid input")
+  ```
+* Magical Calculator that autmoatically evaluates
+  ```python
+  import re
+
+  print("Our Magical Calculator")
+  print("Type 'quit' to exit\n")
+
+  previous = 0
+  run = True
+
+  def performMath():
+    global run
+    global previous
+    equation = ""
+    if previous == 0:
+        equation = input("Enter equation: ")
+    else:
+        equation = input(str(previous))
+
+    
+    if equation == 'quit':
+        print("Goodbye, human.")
+        run = False
+    else:
+        equation = re.sub('[a-zA-z,.:;()" "]', '', equation)
+
+        if previous == 0:
+            previous = eval(equation)
+        else:
+            previous = eval(str(previous) + equation)
+
+  while run:
+    performMath()
+  ```
+    * Notice that there's an eval() function in the else statement that automatically handles the mathematical functions. The re.sub prevents bad inputs from breaking the evaluation/function.
