@@ -1,7 +1,7 @@
 # The Complete Python Course: Beginner to Advanced
 This document is a consolidation of Emily Pfeffer’s course notes from [The Complete Python Course: Beginner to Advanced](https://www.skillshare.com/classes/The-Complete-Python-Course-Beginner-to-Advanced/81017023?lessonsTab=on) offered on Skillshare.
 
-## Basic Programming Concepts
+## Section 1 - Basic Programming Concepts
 
 ### Introduction to Python
 * Python is a widely used high-level, general-purpose, interpreted, dynamic programming language
@@ -332,3 +332,129 @@ This document is a consolidation of Emily Pfeffer’s course notes from [The Com
     performMath()
   ```
     * Notice that there's an eval() function in the else statement that automatically handles the mathematical functions. The re.sub prevents bad inputs from breaking the evaluation/function.
+  
+## Section 2 - Intermediate/Advanced Programming Concepts
+
+### PEP Guidelines
+* Import Classes
+  * Include two blank links between the end of one function and the beginnin of another
+* Indentation and Spacing
+  * Spaces should be natural
+  * Avoid too many spaces
+  * For operators, you can put spaces around the lower-level operators
+    * Example: `x = 3*52 + 7*2`
+  * Put functions on separate lines, instead of using semi-colons to separate them
+```python
+# Import Classes
+import os
+import sys
+from MyModule import include foo, bar, foobar
+
+# Define Functions
+def my_function(one, two, 
+                three, four, 
+                five, six):
+  print("Hello World")
+
+
+def second_function():
+  print("Second function")
+
+
+my_list = [1, 2,
+           3, 4,
+           5, 6]
+
+print("Hello", "Hi")
+
+x = 3*52 + 7*2
+
+check = True
+
+if check is True:
+    print("This is true")
+
+func_one()
+func_two()
+```
+
+### Attack Example
+* Use a break statement to prevent while loops from being neverending
+* Continue statements enable you to continue if statements
+* Scenario: Game Battle
+```python
+import random
+
+
+playerhp = 260
+#Enemy Attack Range
+enemyatkl = 60
+enemyatkh = 80
+
+while playerhp > 0:
+    dmg = random.randrange(enemyatkl, enemyatkh)
+    playerhp = playerhp - dmg
+
+    if playerhp <= 30:
+        playerhp = 30
+
+    print("Enemy strikes for ", dmg, " points of damage. Current HP is ", playerhp)
+
+    if playerhp > 30:
+        continue
+
+    print("You have low health. You've been teleported to the nearest inn.")
+    break
+```
+
+* __Class__ is a set or category of things having some property or attribute in common and differentiated from others by kind, type, or quality. In technical terms we can say that class is a blue print for individual objects with exact behaviour.
+* __Object__ is one of instances of the class. which can perform the functionalities which are defined in the class.
+* __self__ represents the instance of the class. By using the "self" keyword we can access the attributes and methods of the class in python.
+* __"__init__"__ is a reseved method in python classes. It is known as a constructor in object oriented concepts. This method called when an object is created from the class and it allow the class to initialize the attributes of a class.
+* Instance variables (e.g., self) can be used for quick instantiation
+```python
+import random
+
+
+class Enemy:
+    hp = 200
+
+    def __init__(self, atkl, atkh):
+        self.atkl = atkl
+        self.atkh = atkh
+
+
+    def getAtk(self):
+        print(self.atkl)
+    
+
+    def getHp(self):
+        print("HP is ", self.hp)
+
+
+enemy1 = Enemy(40, 49)
+enemy1.getAtk()
+enemy1.getHp()
+
+enemy2 = Enemy(75, 90)
+enemy2.getAtk()
+enemy2.getHp()
+```
+
+### Comments
+* Single-line: prefix line with a hashtag and space
+  ```python
+  # Here's one single-line comment
+  # Here's a separate single-line comment
+  ```
+* Multi-line comments: surround with three single quotes before and after
+  ```python
+  '''
+  Here is my multi-line comment
+  I can add multiple rows of comments here
+  '''
+  ```
+
+### Importing Modules from Relative Paths
+* Don't define classes within your main.py; break them into multiple files
+* Create a new directory called classes
