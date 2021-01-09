@@ -35,13 +35,13 @@ player_items = [{"item": potion, "quantity": 15}, {"item": hipotion, "quantity":
 
 
 # Instantiate People
-player1 = Person("Valos:", 3260, 132, 300, 34, player_spells, player_items)
-player2 = Person("Nick :", 4160, 188, 311, 34, player_spells, player_items)
-player3 = Person("Robot:", 3089, 174, 288, 34, player_spells, player_items)
+player1 = Person("Emily:", 3260, 132, 300, 34, player_spells, player_items)
+player2 = Person("Peter:", 4160, 188, 311, 34, player_spells, player_items)
+player3 = Person("Doug:", 3089, 174, 288, 34, player_spells, player_items)
 
-enemy1 = Person("Imp  ", 1250, 130, 560, 325, enemy_spells, [])
+enemy1 = Person("Troll", 1250, 130, 560, 325, enemy_spells, [])
 enemy2 = Person("Magus", 18200, 701, 525, 25, enemy_spells, [])
-enemy3 = Person("Imp  ", 1250, 130, 560, 325, enemy_spells, [])
+enemy3 = Person("Warlock", 1250, 130, 560, 325, enemy_spells, [])
 
 
 players = [player1, player2, player3]
