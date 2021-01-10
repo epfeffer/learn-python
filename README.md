@@ -458,3 +458,13 @@ enemy2.getHp()
 ### Importing Modules from Relative Paths
 * Don't define classes within your main.py; break them into multiple files
 * Create a new directory called classes
+
+### Build an RPG
+* See "battle" files for completed game
+  * `main.py` is the program
+  * classes
+    * `__init__.py` is the empty class to initiate the program
+    * `game.py` includes the `bcolors` and `Person` classes with their defined methods, as well as their parameters
+      * Read through how the progress bars and functions work
+    * `inventory.py` defines the Item class
+    * `magic.py` defines the Spell class and its methods
