@@ -466,5 +466,19 @@ enemy2.getHp()
     * `__init__.py` is the empty class to initiate the program
     * `game.py` includes the `bcolors` and `Person` classes with their defined methods, as well as their parameters
       * Read through how the progress bars and functions work
+      * You can use ASCII characters
     * `inventory.py` defines the Item class
     * `magic.py` defines the Spell class and its methods
+* Repo can be found at [https://github.com/nickgermaine/python_text_battle](https://github.com/nickgermaine/python_text_battle)
+
+### Reading and Writing Files in Python
+* Native support in the Python language to do this without importing anything
+* How to write a txt file
+  * Create a blank file with `newfile = open("<name of file you want to create>", "<operations you want to take>")`
+    ```python3
+    newfile = open("newfile.txt", "w+")
+
+    string = "This is the content that will be written to the text file."
+
+    newfile.write(string)
+    ```
